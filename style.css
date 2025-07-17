@@ -1,0 +1,290 @@
+body {
+    margin: 0;
+    padding: 10px;
+    min-height: 100vh;
+
+    width: 100%;
+    box-sizing: border-box;
+
+    display: flex;
+    gap: 20px;
+
+    flex-direction: column;
+
+}
+
+
+.hader {
+    background-color: rgb(255, 140, 0);
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    height: 7vw;
+}
+
+.nav_bar {
+    background-color: rgb(255, 140, 0);
+    display: flex;
+    border-radius: 20px;
+    justify-content: flex-end;
+}
+
+.nav_iteam {
+    font-size: 1vw;
+    margin-right: 2vw;
+    margin-bottom: .5vw;
+    /* padding: 5px; */
+    border-radius: 10px;
+    color: white;
+    display: grid;
+    place-items: end;
+    font-family: cursive;
+}
+
+.nav_iteam:hover {
+    color: black;
+}
+
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+.Logo {
+    /* margin-left: 30px; */
+    padding-left: 15px;
+    font-size: large;
+    font-family: cursive;
+    display: flex;
+    flex-direction: column;
+    font-style: oblique;
+    justify-content: space-between;
+    width: 500px;
+    /* border-radius: 20px; */
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+
+    /* border-bottom-right-radius:20px ; */
+    border-bottom-left-radius: 20px;
+    background: linear-gradient(to right, #efc907, #ffb300,  rgb(255, 140, 0));
+    /* background: linear-gradient(to left, #f0e7d2, #f4c649, #eed599); */
+
+    /* background-position: 12px; */
+}
+
+.Logo h1 {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0%;
+    margin-top: 10px;
+    font-size: 3vw;
+
+    /* font-weight: 300; */
+    text-shadow: 2px 2px 5px #5a5856;
+
+}
+
+.modern-marquee {
+    width: 100%;
+    height: 30px;
+    overflow: hidden;
+    white-space: nowrap;
+    /* Force one line */
+    line-height: 30px;
+    /* Align text vertically */
+    box-sizing: border-box;
+}
+
+.modern-marquee span {
+    display: inline-block;
+    white-space: nowrap;
+    /* VERY IMPORTANT */
+    padding-left: 100%;
+    animation: scroll-left 40s linear infinite;
+    font-size: 18px;
+}
+
+@keyframes scroll-left {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+
+
+.state_name_box {
+    margin: 10px;
+    padding: 8px;
+    display: flex;
+    justify-content: space-around;
+    /* border: 1px solid black; */
+    border-radius: 10px;
+    font-size: 1vmax;
+
+    background-color: rgb(241 219 162);
+
+}
+
+.state_name a {
+    text-decoration: none;
+    color: #091f11;
+    font-family: cursive;
+    padding: 4px;
+
+}
+
+.state_name a:hover {
+    background-color: #f4c64a;
+    border-radius: 10px;
+    color: aliceblue;
+
+}
+
+
+/* a {
+    text-decoration: none;
+}
+
+a:hover {
+    font-size: large;
+} */
+
+
+
+
+.states {
+    position: relative;
+
+    overflow: visible;
+    /* background-color: blueviolet; */
+    font-family: cursive;
+    display: flex;
+    height: 18vw;
+    font-size: 1.2rem;
+    /* z-index: 1; */
+
+}
+
+.state_image {
+    border-radius: 30px;
+
+    flex: 0.5;
+    position: relative;
+    background-image: url('images/state\ image/rajesthan.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 1;
+    display: grid;
+    place-items: center;
+
+    display: grid;
+    place-items: center;
+    color: white;
+    text-shadow: 1px 1px 2px black;
+}
+
+.state_contant {
+    border-radius: 30px;
+
+    flex: 1;
+    padding: 10px;
+    display: flex;
+    background: linear-gradient(to left, #f0e7d2, #ffc012, #eed599);
+
+
+    overflow: hidden;
+}
+
+
+#text {
+    transition: 1s ease;
+
+    opacity: 0;
+    flex: 2.5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 6px;
+    padding: 10px;
+    color: #333;
+    transition: 1s ease;
+    transform: translate(0, 380px);
+
+
+}
+
+.text p {
+    margin: 5px 0;
+    background-color: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(4px);
+    padding: 6px;
+    border-radius: 10px;
+}
+
+
+.div2,
+.div4 {
+    display: flex;
+    justify-content: space-around;
+}
+
+.subDiv {
+    flex: 1;
+}
+
+.state_map {
+    border-radius: 10px;
+
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffefc5;
+    opacity: 0;
+    transition: opacity 1s ease-in;
+}
+
+
+.state_map img {
+    width: 90%;
+    height: auto;
+    border-radius: 6px;
+    transition: opacity 1s ease-in;
+
+}
+
+.state_map p {
+    text-align: center;
+    border-radius: 10px;
+
+
+    margin: 0;
+
+    width: 100%;
+    background-color: #f8b500;
+    font-weight: bold;
+    color: white;
+    transition: opacity 1s ease-in;
+}
+
+/* Optional: hide original h2 in .state_image if not used */
+.state_name1 {
+    position: relative;
+    z-index: 2;
+    color: white;
+    font-size: 1.5vw;
+    padding: 20px 20px;
+    border-radius: 20px;
+    backdrop-filter: blur(3px);
+    transition: 1s ease;
+}
+
+#rajesthan{
+    scroll-margin-top: 60px;
+}
