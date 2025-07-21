@@ -139,6 +139,7 @@ html {
 
 .state_name a:hover {
     background-color: #f4c64a;
+    border: 1px solid #b48400;
     border-radius: 10px;
     color: aliceblue;
 
@@ -284,7 +285,6 @@ a:hover {
     backdrop-filter: blur(3px);
     transition: 1s ease;
 }
-
-#rajesthan{
-    scroll-margin-top: 60px;
+.states{
+    scroll-margin-top: 250px;
 }
