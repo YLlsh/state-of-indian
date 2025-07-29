@@ -56,13 +56,18 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   }
+ const buttons = document.querySelectorAll(".nextpage");
 
-  const next = document.getElementById("nextpage");
-  next.addEventListener("click", () => {
-    document.body.style.opacity = "0";
-    setTimeout(() => {
-      window.location.href = "index2.html";
-    }, 1000);
+  buttons.forEach(button => {
+    button.addEventListener("click", () => {
+      const targetURL = button.getAttribute("data-href");
+      document.body.style.transition = "opacity 1s";
+      document.body.style.opacity = "0";
+
+      setTimeout(() => {
+        window.location.href = targetURL;
+      }, 1000);
+    });
   });
 });
 

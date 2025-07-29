@@ -20,15 +20,17 @@ body {
 
 
 .hader {
-    background-color: rgb(255, 140, 0);
+    background-color: rgb(180 177 204);
+    ;
     border-radius: 20px;
     display: flex;
+    border: 1px solid black;
     justify-content: space-between;
     height: 7vw;
 }
 
 .nav_bar {
-    background-color: rgb(255, 140, 0);
+    /* background-color: rgb(255, 140, 0); */
     display: flex;
     border-radius: 20px;
     justify-content: flex-end;
@@ -72,7 +74,7 @@ html {
 
     /* border-bottom-right-radius:20px ; */
     border-bottom-left-radius: 20px;
-    background: linear-gradient(to right, #efc907, #ffb300, rgb(255, 140, 0));
+    /* background: linear-gradient(to right, #efc907, #ffb300, rgb(255, 140, 0)); */
     /* background: linear-gradient(to left, #f0e7d2, #f4c649, #eed599); */
 
     /* background-position: 12px; */
@@ -129,6 +131,7 @@ html {
     /* border: 1px solid black; */
     border-radius: 10px;
     font-size: 1vmax;
+    border: 1px solid black;
 
     background-color: rgb(241 219 162);
 
@@ -191,12 +194,12 @@ a:hover {
     z-index: 1;
     display: grid;
     place-items: center;
-   border: 1px solid black;
-   /* border-right: none; */
+    border: 1px solid black;
+    /* border-right: none; */
     display: grid;
     place-items: center;
     color: white;
-  
+
     text-shadow: 1px 1px 2px black;
 }
 
@@ -207,8 +210,8 @@ a:hover {
     padding: 10px;
     display: flex;
     /* background: linear-gradient(to left, #f0e7d2, #ffc012, #eed599); */
-   border: 1px solid black;
-   border-left: none;
+    border: 1px solid black;
+    border-left: none;
 
     overflow: hidden;
 }
@@ -308,3 +311,34 @@ a:hover {
 .states {
     scroll-margin-top: 250px;
 }
+
+.changesPage {
+    width: 100%;
+    height: 30px;
+    text-align: center;
+    background-color: #333; display: flex;
+    justify-content: center;
+    
+}
+
+#nextpage {
+    /* padding: 0px; */
+    font-family: cursive;
+font-size: large;
+margin-left: 20px;
+    width: 100px;
+    height: 100%;
+   
+    /* right: 100px; */
+}
+ footer {
+      background-color: rgb(180, 177, 204);
+      height: 100px;
+      border: 1px solid black;
+      /* border-radius: 0 0 30px 30px; */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: Arial, sans-serif;
+      font-size: 1vw;
+    }
