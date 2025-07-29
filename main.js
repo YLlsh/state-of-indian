@@ -4,16 +4,12 @@ document.addEventListener("DOMContentLoaded", () => {
   let state_name = document.getElementsByClassName("state_name1");
   const state_map = document.getElementsByClassName("state_map");
 
-  for (let j = 0; j < state_name.length; j++){
-
-    if( j % 2 == 0){
+  for (let j = 0; j < state_name.length; j++) {
+    if (j % 2 == 0) {
       state_name[j].style.transform = "translate(50vw)";
-      
+    } else {
+      state_name[j].style.transform = "translate(-50vw)";
     }
-    else{
-       state_name[j].style.transform = "translate(-50vw)";
-    }
-
   }
 
   for (let i = 0; i < state.length; i++) {
@@ -53,12 +49,63 @@ document.addEventListener("DOMContentLoaded", () => {
 
       Rajasthan_content[i].style.transform = "translate(0, 380px)";
 
-      if(i % 2 === 0){
+      if (i % 2 === 0) {
         state_name[i].style.transform = "translate(50vw)";
-      }
-      else{
+      } else {
         state_name[i].style.transform = "translate(-50vw)";
       }
     });
   }
+
+  const next = document.getElementById("nextpage");
+  next.addEventListener("click", () => {
+    document.body.style.opacity = "0";
+    setTimeout(() => {
+      window.location.href = "index2.html";
+    }, 1000);
+  });
 });
+
+
+
+  window.addEventListener("load", function () {
+    const colorThief = new ColorThief();
+
+    function getGradientFromColor([r, g, b]) {
+      const lighten = (x) => Math.min(255, x + 50);
+      const darken = (x) => Math.max(0, x - 40);
+
+      const colorLight = `rgb(${lighten(r)}, ${lighten(g)}, ${lighten(b)})`;
+      const colorMid = `rgb(${r}, ${g}, ${b})`;
+      const colorDark = `rgb(${darken(r)}, ${darken(g)}, ${darken(b)})`;
+
+      return `linear-gradient(to left, ${colorLight}, ${colorMid}, ${colorLight})`;
+    }
+
+    document.querySelectorAll(".states").forEach((state) => {
+      const bgDiv = state.querySelector(".state_image");
+      const contentDiv = state.querySelector(".state_contant");
+      const state_map = state.querySelector(".state_map");
+
+      const bgImageStyle = getComputedStyle(bgDiv).backgroundImage;
+      if (!bgImageStyle || bgImageStyle === 'none') return;
+
+      const imageUrl = bgImageStyle.slice(5, -2);
+
+      const img = new Image();
+      img.crossOrigin = "anonymous";
+      img.src = imageUrl;
+
+      img.onload = function () {
+        try {
+          const dominantColor = colorThief.getColor(img);
+          const gradient = getGradientFromColor(dominantColor);
+          contentDiv.style.background = gradient;
+          // state_map.style.backgroundColor = gradient;
+        } catch (err) {
+          console.warn("Color extraction failed:", err);
+        }
+      };
+    });
+  });
+
