@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
     padding: 10px;
@@ -7,9 +11,10 @@ body {
     box-sizing: border-box;
 
     display: flex;
-    gap: 20px;
+    gap: 2vh;
 
     flex-direction: column;
+    transition: 1s ease-in;
 
 }
 
@@ -59,11 +64,18 @@ html {
     display: flex;
     flex-direction: column;
     font-style: oblique;
-    width: 22vw;
+    justify-content: space-between;
+    width: 500px;
+    /* border-radius: 20px; */
     border-top-right-radius: 20px;
     border-top-left-radius: 20px;
+
+    /* border-bottom-right-radius:20px ; */
     border-bottom-left-radius: 20px;
     background: linear-gradient(to right, #efc907, #ffb300, rgb(255, 140, 0));
+    /* background: linear-gradient(to left, #f0e7d2, #f4c649, #eed599); */
+
+    /* background-position: 12px; */
 }
 
 .Logo h1 {
@@ -71,6 +83,8 @@ html {
     margin: 0%;
     margin-top: 10px;
     font-size: 3vw;
+
+    /* font-weight: 300; */
     text-shadow: 2px 2px 5px #5a5856;
 
 }
@@ -92,7 +106,7 @@ html {
     /* VERY IMPORTANT */
     padding-left: 100%;
     animation: scroll-left 40s linear infinite;
-    font-size: 1vw;
+    font-size: 18px;
 }
 
 @keyframes scroll-left {
@@ -108,7 +122,7 @@ html {
 
 
 .state_name_box {
-    margin: 10px;
+    margin: 0px;
     padding: 8px;
     display: flex;
     justify-content: space-around;
@@ -122,10 +136,12 @@ html {
 
 .state_name a {
     text-decoration: none;
+    border: 1px solidrgb(241 219 162);
+
     color: #091f11;
     font-family: cursive;
     padding: 4px;
-
+    box-sizing: border-box;
 }
 
 .state_name a:hover {
@@ -133,6 +149,8 @@ html {
     border: 1px solid #b48400;
     border-radius: 10px;
     color: aliceblue;
+    box-sizing: border-box;
+
 
 }
 
@@ -173,10 +191,12 @@ a:hover {
     z-index: 1;
     display: grid;
     place-items: center;
-
+   border: 1px solid black;
+   /* border-right: none; */
     display: grid;
     place-items: center;
     color: white;
+  
     text-shadow: 1px 1px 2px black;
 }
 
@@ -186,8 +206,9 @@ a:hover {
     flex: 1;
     padding: 10px;
     display: flex;
-    background: linear-gradient(to left, #f0e7d2, #ffc012, #eed599);
-
+    /* background: linear-gradient(to left, #f0e7d2, #ffc012, #eed599); */
+   border: 1px solid black;
+   border-left: none;
 
     overflow: hidden;
 }
@@ -195,28 +216,28 @@ a:hover {
 
 #text {
     transition: 1s ease;
-
+    padding: 10px;
     opacity: 0;
     flex: 2.5;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 6px;
+    gap: 0.3vw;
+    font-size: 0.9vw;
     padding: 10px;
     color: #333;
     transition: 1s ease;
-    /* transform: translate(0, 380px); */
+    transform: translate(0, 380px);
 
 
 }
 
 .text p {
-    margin: 5px 0;
+    margin: 0px;
     background-color: rgba(255, 255, 255, 0.4);
     backdrop-filter: blur(4px);
     padding: 6px;
     border-radius: 10px;
-    font-size: small;
 }
 
 
@@ -224,10 +245,13 @@ a:hover {
 .div4 {
     display: flex;
     justify-content: space-around;
+    gap: 5px;
 }
 
 .subDiv {
     flex: 1;
+    /* height: min-content; */
+
 }
 
 .state_map {
@@ -238,14 +262,17 @@ a:hover {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #ffefc5;
+    border: 1px solid black;
+    /* background: cross-fade(5px);  backdrop-filter: blur(10px); */
+    /* background-color: #ffefc5; */
     opacity: 0;
+    backdrop-filter: blue(60px);
     transition: opacity 1s ease-in;
 }
 
 
 .state_map img {
-    width: 90%;
+    width: 16vw;
     height: auto;
     border-radius: 6px;
     transition: opacity 1s ease-in;
