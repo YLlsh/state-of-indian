@@ -1,4 +1,4 @@
-# 🇮🇳 India States Explorer
+# Indian States Explorer
 
 A lightweight, static website that showcases **all States & Union Territories of India** with their key facts — **capital, population, location, tourist spots, culture, festivals, industries** — built with **HTML, CSS, and vanilla JavaScript (DOM)**.  
 No frameworks, no build tools: just clean, accessible, and performant web fundamentals.
